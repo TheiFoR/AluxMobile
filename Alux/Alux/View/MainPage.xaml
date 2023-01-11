@@ -1,0 +1,130 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Alux.MainPage">
+
+    <Grid Background="#000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Column="1" BackgroundColor="#31cdfd" CornerRadius="20" Margin="8"/>
+            <Label Grid.Column="0" Text="Effect:" FontFamily="RobotoBlack" TextColor="#FFF" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Label Grid.Column="1" Text="Fire" FontFamily="RobotoBlack" TextColor="#FFF" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Column="1" Grid.Row="1" BackgroundColor="#000000"/>
+            <Label Grid.Column="1" TextColor="#FFFFFF" FontFamily="RobotoBlack" FontSize="45" Text="Glad you're here, enjoy!"/>
+            <Label Grid.Column="1" Grid.Row="1" TextColor="#999999" FontFamily="RobotoLight" FontSize="17" Text="Glow your way" VerticalOptions="Start"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid x:Name="onOrOffBackgroundGrid" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                <BoxView Color="{StaticResource FirstPanel}" CornerRadius="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="54"/>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="50" Text="Off" TextColor="#FFF" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" FontFamily="RobotoMedium" FontSize="10" Text="On or Off your LED" TextColor="#DDD" HorizontalOptions="Center"/>
+                </Grid>
+                <Button BackgroundColor="#0000000" 
+                        CornerRadius="20"
+                        x:Name="onOrOffSettings">
+                </Button>
+            </Grid>
+
+            <Grid x:Name="brightBackgroundGrid" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Margin="5">
+                <BoxView Color="{StaticResource SecondPanel}" CornerRadius="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="64"/>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="50" Text="Bright" TextColor="#FFF" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" FontFamily="RobotoMedium" FontSize="10" Text="How much do you need light?" TextColor="#DDD" HorizontalOptions="Center"/>
+                </Grid>
+                <Button x:Name="brightSettings" BackgroundColor="#00000000" 
+                        CornerRadius="20">
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                <BoxView Color="{StaticResource ThirdPanel}" CornerRadius="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="54"/>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="50" Text="Effect" TextColor="#FFF" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" FontFamily="RobotoMedium" FontSize="10" Text="Change the situation" TextColor="#DDD" HorizontalOptions="Center"/>
+                </Grid>
+                <Button x:Name="effectSettings" BackgroundColor="#00000000" 
+                        CornerRadius="20">
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="5">
+                <BoxView Color="{StaticResource FourthPanel}" CornerRadius="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="34"/>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="27" Text="Settings" TextColor="#FFF" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" FontFamily="RobotoMedium" FontSize="10" Text="More power" TextColor="#DDD" HorizontalOptions="Center"/>
+                </Grid>
+                <Button x:Name="moreSettings" BackgroundColor="#00000000" 
+                        CornerRadius="20">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <BoxView Color="#000000" CornerRadius="20"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid>
+                <Grid Grid.Column="0">
+                    <Button x:Name="homePage"
+                            BackgroundColor="#000" FontFamily="iconFonts1" Text="i" FontSize="30" TextColor="{StaticResource SelectedIconsColor}"
+                            Clicked="goToMainPage"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button x:Name="selectionPage"
+                            BackgroundColor="#000" FontFamily="iconFonts1" Text="d" FontSize="30" TextColor="{StaticResource IconsColor}"
+                            Clicked="goToModeSelectionPage"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button x:Name="settingsPage"
+                            BackgroundColor="#000" FontFamily="iconFonts2" Text="S" FontSize="30" TextColor="{StaticResource IconsColor}"
+                            Clicked="goToSettings"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
