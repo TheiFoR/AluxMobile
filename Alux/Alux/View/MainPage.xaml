@@ -76,7 +76,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="54"/>
-                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="15"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="50" Text="Effect" TextColor="#FFF" HorizontalOptions="Center" />
