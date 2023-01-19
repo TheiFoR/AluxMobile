@@ -10,7 +10,7 @@ namespace Alux
         public App()
         {
             InitializeComponent();
-            MainPage = new ViewingBluetoothDevices();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
