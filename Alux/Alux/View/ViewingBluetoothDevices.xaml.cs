@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.BluetoothClassic.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,16 @@ namespace Alux.View
 	{
 		public ViewingBluetoothDevices ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+
+
+			FillBondedDevices();
 		}
-	}
+
+        private void FillBondedDevices()
+        {
+			IBluetoothAdapter adapter = DependencyService.Resolve<IBluetoothAdapter>();
+			stackForDevices.ItemsSource = adapter.BondedDevices;
+        }
+    }
 }

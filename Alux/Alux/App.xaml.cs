@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Alux.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,7 @@ namespace Alux
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new ViewingBluetoothDevices();
         }
 
         protected override void OnStart()

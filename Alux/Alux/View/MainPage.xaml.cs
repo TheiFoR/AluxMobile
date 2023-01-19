@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Alux.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -59,13 +60,11 @@ namespace Alux
             selectionPage.TextColor = Color.FromHex(selectedIconColor);
             settingsPage.TextColor = Color.FromHex(IconColor);
         }
-        async void goToSettings(object sender, EventArgs args)
+        void goToSettings(object sender, EventArgs args)
         {
             homePage.TextColor = Color.FromHex(IconColor);
             selectionPage.TextColor = Color.FromHex(IconColor);
             settingsPage.TextColor = Color.FromHex(selectedIconColor);
-
-            await Navigation.PushAsync(new Viewing);
         }
     }
 }
