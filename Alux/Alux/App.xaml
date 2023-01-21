@@ -10,7 +10,8 @@
             <Color x:Key="SecondPanel">#f57145</Color>
             <Color x:Key="ThirdPanel">#49bd8a</Color>
             <Color x:Key="FourthPanel">#619ed1</Color>
-
+            <Color x:Key="Gray">#262626</Color>
+            <Color x:Key="LGray">#303030</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

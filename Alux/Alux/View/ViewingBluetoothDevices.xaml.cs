@@ -21,10 +21,19 @@ namespace Alux.View
 			FillBondedDevices();
 		}
 
-        private void FillBondedDevices()
-        {
+		private void FillBondedDevices()
+		{
 			IBluetoothAdapter adapter = DependencyService.Resolve<IBluetoothAdapter>();
-			stackForDevices.ItemsSource = adapter.BondedDevices;
-        }
+
+			int bluetoothDeviceCount = (int)adapter.BondedDevices.LongCount();
+
+			List<BluetoothDevice> items = new List<BluetoothDevice>();
+
+			for (int i = 0; i < bluetoothDeviceCount; ++i)
+			{
+				items.Add(new BluetoothDevice { name = adapter.BondedDevices.ElementAt(i).Name, description = adapter.BondedDevices.ElementAt(i).Address});
+			}
+			listOfDevices.ItemsSource = items;
+		}
     }
 }

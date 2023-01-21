@@ -5,6 +5,12 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Android.Bluetooth;
+using AndroidX.Core.Content;
+using Android;
+using AndroidX.Core.App;
+using Android.Nfc;
+using Android.Util;
+using Google.Android.Material.Snackbar;
 
 namespace Alux.Droid
 {
@@ -18,7 +24,15 @@ namespace Alux.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#000000"));
-            LoadApplication(new App());
+            if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Manifest.Permission.BluetoothConnect))
+            {
+                LoadApplication(new App());
+            }
+            else
+            {
+                ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.BluetoothConnect }, 1);
+                LoadApplication(new App());
+            }
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
