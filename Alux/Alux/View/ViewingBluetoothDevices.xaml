@@ -37,7 +37,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                        <Grid Margin="0, 5">
+                            <Grid Margin="0, 5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0"/>
                                 <ColumnDefinition Width="*"/>
@@ -54,7 +54,7 @@
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="22"/>
                                         <RowDefinition Height="13"/>
-                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Column="1" Grid.Row="1" FontFamily="RobotoBlack" FontSize="20" Text="{Binding name}" />
                                     <Label Grid.Column="1" Grid.Row="2" FontFamily="RobotoLight" FontSize="10" Text="{Binding description}" />
