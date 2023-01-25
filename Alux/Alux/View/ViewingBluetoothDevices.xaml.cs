@@ -17,7 +17,6 @@ namespace Alux.View
 		{
 			InitializeComponent();
 
-
 			FillBondedDevices();
 		}
 
@@ -31,9 +30,14 @@ namespace Alux.View
 
 			for (int i = 0; i < bluetoothDeviceCount; ++i)
 			{
-				items.Add(new BluetoothDevice { name = adapter.BondedDevices.ElementAt(i).Name, description = adapter.BondedDevices.ElementAt(i).Address});
+				items.Add(new BluetoothDevice { name = adapter.BondedDevices.ElementAt(i).Name, address = adapter.BondedDevices.ElementAt(i).Address});
 			}
 			listOfDevices.ItemsSource = items;
+		}
+
+		public void TappingBluetoothDevice(object sender, ItemTappedEventArgs e)
+		{
+
 		}
     }
 }

@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BluetoothDevicesCell.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Fonts\Glyphter.ttf" />
     <None Remove="Fonts\Glyphter2.ttf" />
     <None Remove="Fonts\Roboto-Black.ttf" />
@@ -51,6 +55,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="BluetoothDeviceCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\ViewingBluetoothDevices.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

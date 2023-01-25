@@ -7,3 +7,4 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("Roboto-Black.ttf", Alias = "RobotoBlack")]
 [assembly: ExportFont("Roboto-Medium.ttf", Alias = "RobotoMedium")]
 [assembly: ExportFont("Roboto-Light.ttf", Alias = "RobotoLight")]
+

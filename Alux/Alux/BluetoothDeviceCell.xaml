@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Alux.BluetoothDeviceCell">
+    <ViewCell.View>
+        <Grid x:Name="fieldForAll" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource Gray}"/>
+            <Grid Grid.Column="1" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" FontFamily="RobotoBlack" FontSize="20" x:Name="name" VerticalOptions="EndAndExpand"/>
+                <Label Grid.Row="2" FontFamily="RobotoLight" FontSize="10" x:Name="address" VerticalOptions="StartAndExpand"/>
+            </Grid>
+        </Grid>
+    </ViewCell.View>
+</ViewCell>
